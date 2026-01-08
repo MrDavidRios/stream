@@ -1,7 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import tauriLogo from "/tauri.svg";
+import viteLogo from "./assets/vite.svg";
+import tauriLogo from "./assets/tauri.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
