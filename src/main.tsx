@@ -5,12 +5,12 @@ import App from "./App";
 import { BrainDump } from "./pages/brain-dump/BrainDump.tsx";
 import { SortDump } from "./pages/sort-dump/SortDump.tsx";
 import {
-  isFirstTimeToday,
+  // isFirstTimeToday,
   markTodayAsVisited,
 } from "./hooks/useFirstTimeToday";
 
 function AppRouter() {
-  const shouldShowBrainDump = isFirstTimeToday();
+  const shouldShowBrainDump = true //isFirstTimeToday();
 
   return (
     <BrowserRouter>

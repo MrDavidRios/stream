@@ -60,6 +60,8 @@
   padding: 1rem;
   font-size: 1.1rem;
   cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
 }
 
 .brain-dump-sort-button:disabled {
