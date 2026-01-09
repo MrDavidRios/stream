@@ -11,7 +11,7 @@ import { restrictToWindowEdges } from "@dnd-kit/modifiers";
 import { Task, SortedTask, SortAction, BucketType } from "../../types/sorting";
 import { DraggableCard } from "./components/DraggableCard";
 import { DropBucket } from "./components/DropBucket";
-import "./SortDump.css";
+import "./sort-dump.css";
 
 export function SortDump() {
   const location = useLocation();
@@ -132,18 +132,19 @@ export function SortDump() {
             taskCount={todayTasks.length}
           />
 
-          <div className="sort-dump__card-zone">
-            {currentTask && (
-              <DraggableCard task={currentTask} exitDirection={exitDirection} />
-            )}
-          </div>
-
           <DropBucket
             id="this-week"
             label="This Week"
             position="right"
             taskCount={thisWeekTasks.length}
           />
+
+          {/* Last in DOM so it stacks on top of both buckets */}
+          <div className="sort-dump__card-zone">
+            {currentTask && (
+              <DraggableCard task={currentTask} exitDirection={exitDirection} />
+            )}
+          </div>
         </div>
 
         {canUndo && (

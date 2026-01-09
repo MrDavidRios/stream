@@ -1,6 +1,6 @@
 import { useState, KeyboardEvent } from "react";
 import { useNavigate } from "react-router";
-import "./BrainDump.css";
+import "./brain-dump.css";
 
 interface BrainDumpProps {
   onComplete?: () => void;
