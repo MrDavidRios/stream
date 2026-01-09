@@ -1,0 +1,68 @@
+.brain-dump {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.brain-dump-header {
+  flex-shrink: 0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brain-dump-header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.brain-dump-header p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.brain-dump-input {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.brain-dump-list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  min-height: 0;
+}
+
+.brain-dump-item {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .brain-dump-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.brain-dump-sort-button {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.brain-dump-sort-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
