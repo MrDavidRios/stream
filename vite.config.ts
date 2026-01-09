@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from '@tailwindcss/vite'
 
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
@@ -9,7 +10,7 @@ const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
 
   // Use repository name as base path for GitHub Pages, otherwise root for Tauri
   base: isGitHubPages ? "/stream/" : "/",
